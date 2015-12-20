@@ -1,4 +1,7 @@
 class ProjectsController < ApplicationController
+
+  before_action :authenticate_admin!, except: [:index,:show]
+
   def index
   end
 
@@ -23,6 +26,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-      params.require(:project).permit(:title,:description)
+      params.require(:project).permit(:title,:description,:image)
   end
 end

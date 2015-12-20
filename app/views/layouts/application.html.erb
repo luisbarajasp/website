@@ -5,10 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,200' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 
-<%= yield %>
+    <header id="main-navigation" class="clearfix">
+        
+    </header>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
 
 </body>
 </html>
