@@ -1,0 +1,51 @@
+$principal: #648aa4;
+$secondary: #bacdd5;
+$dark: #424652;
+$white: #fff;
+$highlight: #FF884D;
+$light-gray: #ededed;
+$uLight-gray: #f9f9f9;
+$gray-logo: #dedede;
+$gray: #939393;
+$red: #ff4c4c;
+
+#profile{
+    text-align: center;
+    background: $white;
+    overflow:auto;
+    width: 100%;
+    z-index: 2;
+    margin-top: -10px;
+    padding: 1em 0;
+    box-shadow: 1px 1px 5px #888888;
+    .info{
+        border-bottom: 1px solid $light-gray;
+        h3{
+            padding: .5em 0;
+        }
+        h4{
+            padding: .5em 0;
+        }
+    }
+    .education{
+        border-right: 1px solid $light-gray;
+        h4{
+            padding: 1em 0;
+        }
+        ul{
+            text-align: left;
+        }
+    }
+    .programming-lang{
+        h4{
+            padding: 1em 0;
+        }
+        .first{
+            border-right: 1px dotted $secondary;
+        }
+    }
+}
+
+#welcome-content{
+    background: $light-gray;
+}

@@ -12,8 +12,26 @@
 <body>
 
     <header id="main-navigation" class="clearfix">
-        
+        <div class="brand-logo">
+            <%= image_tag "logo.png", class: "img-circle" %>
+        </div>
+        <div class="social">
+            <a href="https://github.com/luisbarajasp"><i class="fa fa-github"></i></a>
+            <a href="https://twitter.com/luis_barajasp"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/luisbarajasp"><i class="fa fa-facebook"></i></a>
+            <a href="mailto:luisbarajasp@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+        <div class="btn-navigation" onclick="return toggleNav()">
+            <i id="icon" class="fa fa-bars"></i>
+        </div>
     </header>
+
+    <div class="list-group navigation-menu">
+      <%= link_to '<i class="fa fa-home fa-fw"></i>&nbsp; Home'.html_safe, root_path, class: "list-group-item" %>
+      <%= link_to '<i class="fa fa-folder fa-fw"></i>&nbsp; Projects'.html_safe, projects_path, class: "list-group-item" %>
+      <%= link_to '<i class="fa fa-graduation-cap fa-fw"></i>&nbsp; Resume'.html_safe, projects_path, class: "list-group-item" %>
+      <%= link_to '<i class="fa fa-paper-plane fa-fw"></i>&nbsp; Contact Me'.html_safe, projects_path, class: "list-group-item" %>
+    </div>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

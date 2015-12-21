@@ -18,3 +18,20 @@
 //= require jquery.turbolinks
 //= require turbolinks
 //= require_tree .
+
+function toggleNav(){
+    var menu = $('.navigation-menu');
+
+    $(menu).slideToggle(400);
+
+    var icon = $('#icon');
+    flag = icon.hasClass('fa-bars');
+
+    if(flag){
+        icon.removeClass('fa-bars');
+        icon.addClass('fa-times');
+    }else{
+        icon.removeClass('fa-times');
+        icon.addClass('fa-bars');
+    }
+}
