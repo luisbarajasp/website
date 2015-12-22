@@ -141,42 +141,65 @@ p,ul,ol{
             }
         }
     }
-    .btn-navigation{
-        font-size: 2em;
+    // .btn-navigation{
+    //     font-size: 2em;
+    //     float: right;
+    //     display: inline-block;
+    //     text-align: center;
+    //     width: 10%;
+    //     height: 100%;
+    //     i{
+    //         border: 1px solid $gray;
+    //         //Border radius
+    //         -moz-border-radius: 4px;
+    //         -webkit-border-radius: 4px;
+    //         border-radius: 4px;
+    //         padding-top: 2.5%;
+    //         background: $light-gray;
+    //         margin-top: 10%;
+    //         height: 60%;
+    //         width: 40%;
+    //         cursor: pointer;
+    //         &:hover{
+    //             background: $gray;
+    //         }
+    //     }
+    // }
+    nav{
         float: right;
         display: inline-block;
-        text-align: center;
-        width: 10%;
-        height: 100%;
-        i{
-            border: 1px solid $gray;
+        padding: .9em 2em;
+        a{
+            color: $gray;
+            font-size: 1.2em;
+            text-decoration: none;
+            padding: .5em;
             //Border radius
-            -moz-border-radius: 4px;
-            -webkit-border-radius: 4px;
-            border-radius: 4px;
-            padding-top: 2.5%;
-            background: $light-gray;
-            margin-top: 10%;
-            height: 60%;
-            width: 40%;
-            cursor: pointer;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
             &:hover{
-                background: $gray;
+                color: $principal;
             }
         }
     }
 }
 
-.navigation-menu{
-    position: fixed;
-    top: 65px;
-    right: 5px;
-    width: 200px;
-    display: none;
-}
+// .navigation-menu{
+//     position: fixed;
+//     top: 65px;
+//     right: 5px;
+//     width: 200px;
+//     display: none;
+// }
 
 .sec-title{
     font-family: 'Poiret One', cursive;
+}
+
+.active{
+    background: $principal;
+    color: $light-gray;
 }
 
 

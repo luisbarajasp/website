@@ -11,7 +11,7 @@ $red: #ff4c4c;
 
 #profile{
     text-align: center;
-    background: url('https://dl.dropboxusercontent.com/s/nmohumve2nxhnw7/welcome_bg.jpg?dl=0') no-repeat center center fixed;
+    background: linear-gradient(rgba(73,155,234, 0.45),rgba(16, 63, 116, 0.45)),url('https://dl.dropboxusercontent.com/s/nmohumve2nxhnw7/welcome_bg.jpg?dl=0') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -19,7 +19,7 @@ $red: #ff4c4c;
     overflow:auto;
     width: 100%;
     z-index: 2;
-    margin-top: -10px;
+    margin-top: -15px;
     padding: 2em 0;
     box-shadow: 1px 1px 5px #888888;
     height:95vh;
@@ -32,6 +32,24 @@ $red: #ff4c4c;
         h4{
             color: $white;
             padding: .5em 0;
+        }
+        .clearfix{
+            padding: .3em 0 1em 0;
+            .resume-btn{
+                color: $white;
+                text-decoration: none;
+                background: $gray;
+                padding: .5em;
+                margin-bottom: 1em;
+                //Border radius
+                -moz-border-radius: 40px;
+                -webkit-border-radius: 40px;
+                border-radius: 40px;
+                border: 1px solid $secondary;
+                &:hover{
+                    background: $dark;
+                }
+            }
         }
     }
     .education{
@@ -91,13 +109,13 @@ $red: #ff4c4c;
     }
 }
 
-#welcome-content{
+#about-content{
     z-index: -1;
     padding: 1em;
     background: $light-gray;
     text-align: center;
     height:95vh;
-    .about-me{
+    #about-me{
         padding-top: 1em;
         .content{
             text-align: left;
@@ -117,4 +135,112 @@ $red: #ff4c4c;
             }
         }
     }
+}
+
+#projects-content{
+    z-index: -1;
+    padding: 1em;
+    background: $light-gray;
+    text-align: center;
+    height:95vh;
+    .index{
+        .col3{
+            padding: 0 .5em;
+            .thumbnail{
+                position:relative;
+                padding: 0;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                .caption{
+                    padding: 0;
+                }
+                .pin_title{
+                    padding: 9px;
+                    h4{
+                        font-weight: 700;
+                        font-size: 1em;
+                    }
+                    .likes{
+                        color: $gray;
+                    }
+                    border-bottom: 1px solid $light-gray;
+                }
+                .pin_desc{
+                    padding: 9px;
+                    p{
+                        font-size: 1em;
+                        margin: 0;
+                    }
+                    border-bottom: 1px solid $light-gray;
+                }
+                .pin_user{
+                    padding: 9px;
+                    img{
+                        float:left;
+                        margin-right: .5em;
+                    }
+                    a{
+                        padding-left: 2px;
+                        color: $dark;
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        background-color: $light-gray;
+                    }
+                }
+                a{
+                    display: block;
+                    max-height: 785px;
+                    overflow: hidden;
+                }
+                img{
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                }
+                .pin_hover,.pin_hover_left{
+                    display: none;
+                }
+                &:hover{
+                    .pin_hover_left{
+                        display: block;
+                        top: .2em;
+                        left: .3em;
+                        a{
+                            text-decoration: none;
+                            font-family: 'Damion', cursive;
+                            letter-spacing: 2px;
+                        }
+                        font-size: 2em;
+                        position: absolute;
+                    }
+                    .pin_hover{
+                        display: block;
+                        width: inherit;
+        			    height: inherit;
+                        top:.2em;
+            		    right:.3em;
+                        a{
+                            color: $red;
+                            text-decoration: none;
+                        }
+                        font-size: 2em;
+            		    position: absolute;
+                        .change-icon > .fa:nth-child(2) {
+                          display: none;
+                        }
+                        &:hover{
+                            .change-icon > .fa:nth-child(1) {
+                              display: none;
+                            }
+                            .change-icon > .fa:nth-child(2) {
+                              display: inherit;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
 }
