@@ -76,7 +76,7 @@ function onScroll(event){
     $('.navbar a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos - 80) {
             $('.navbar a').removeClass("active");
             currLink.addClass("active");
         }
