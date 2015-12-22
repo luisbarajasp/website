@@ -63,7 +63,23 @@
 </section>
 
 <section id="projects-content">
-    <div id="projects" class="index">
-
+    <div id="projects" class="index wrapper wrapper_padding transitions-enabled">
+        <% @projects.each do |p| %>
+        <div class="box col3">
+          <div class="thumbnail">
+               <%= link_to image_tag(p.image.url(:medium)), p %>
+               <div class="caption">
+                    <div class="pin_title">
+                        <h4><%= p.title %></h4>
+                    </div>
+                    <% if p.description? %>
+                        <div class="pin_desc">
+                            <p><%= p.description %></p>
+                        </div>
+                    <% end %>
+               </div>
+            </div>
+        </div>
+        <% end %>
     </div>
 </section>

@@ -38,7 +38,7 @@ $red: #ff4c4c;
             .resume-btn{
                 color: $white;
                 text-decoration: none;
-                background: $gray;
+                background: $dark;
                 padding: .5em;
                 margin-bottom: 1em;
                 //Border radius
@@ -47,7 +47,7 @@ $red: #ff4c4c;
                 border-radius: 40px;
                 border: 1px solid $secondary;
                 &:hover{
-                    background: $dark;
+                    background: $gray;
                 }
             }
         }

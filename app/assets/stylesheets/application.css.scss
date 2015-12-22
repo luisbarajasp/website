@@ -165,12 +165,11 @@ p,ul,ol{
     //         }
     //     }
     // }
-    nav{
+    .navbar{
         float: right;
         display: inline-block;
         padding: .9em 2em;
         a{
-            color: $gray;
             font-size: 1.2em;
             text-decoration: none;
             padding: .5em;
@@ -178,9 +177,18 @@ p,ul,ol{
             -moz-border-radius: 6px;
             -webkit-border-radius: 6px;
             border-radius: 6px;
+        }
+        .inactive{
+            color: $gray;
             &:hover{
-                color: $principal;
+                color: $dark;
             }
+        }
+        .active{
+            background: $dark;
+            color: $light-gray;
+            pointer-events: none;
+            cursor: default;
         }
     }
 }
@@ -195,11 +203,6 @@ p,ul,ol{
 
 .sec-title{
     font-family: 'Poiret One', cursive;
-}
-
-.active{
-    background: $principal;
-    color: $light-gray;
 }
 
 

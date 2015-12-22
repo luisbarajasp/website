@@ -78,10 +78,12 @@ function onScroll(event){
         var refElement = $(currLink.attr("href"));
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos - 80) {
             $('.navbar a').removeClass("active");
+            currLink.removeClass("inactive");
             currLink.addClass("active");
         }
         else{
             currLink.removeClass("active");
+            currLink.addClass("inactive");
         }
     });
 }
