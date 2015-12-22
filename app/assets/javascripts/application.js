@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require fancybox
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
@@ -35,3 +36,28 @@ function toggleNav(){
         icon.addClass('fa-bars');
     }
 }
+
+$(document).ready(function(){
+
+    if( window.localStorage ) {
+        if( !localStorage.getItem( 'firstLoad' ) ) {
+          localStorage[ 'firstLoad' ] = true;
+          window.location.reload();
+        }
+        else
+          localStorage.removeItem( 'firstLoad' );
+  }
+
+    $('.fancybox').fancybox({
+        width  : 600,
+        height : 900,
+        type   :'iframe',
+    });
+
+    $('#btn-about').click(function(){
+        $('html,body').animate({
+            scrollTop: $(".about-me").offset().top
+        },1000);
+    });
+
+});

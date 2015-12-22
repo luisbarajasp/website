@@ -11,41 +11,110 @@ $red: #ff4c4c;
 
 #profile{
     text-align: center;
-    background: $white;
+    background: url(welcome_bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     overflow:auto;
     width: 100%;
     z-index: 2;
     margin-top: -10px;
-    padding: 1em 0;
+    padding: 2em 0;
     box-shadow: 1px 1px 5px #888888;
+    height:95vh;
     .info{
         border-bottom: 1px solid $light-gray;
         h3{
+            color: $white;
             padding: .5em 0;
         }
         h4{
+            color: $white;
             padding: .5em 0;
         }
     }
     .education{
         border-right: 1px solid $light-gray;
         h4{
+            color: $white;
             padding: 1em 0;
         }
+        h5{
+            color: $white;
+        }
         ul{
+            li{
+                color: $white;
+            }
             text-align: left;
         }
     }
     .programming-lang{
         h4{
+            color: $white;
             padding: 1em 0;
+        }
+        h5{
+            color: $white;
         }
         .first{
             border-right: 1px dotted $secondary;
         }
     }
+    .btn-about{
+        padding-top: 2em;
+        a{
+            font-size: 2em;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.0);
+            color: $white;
+            padding: .25em;
+            //Border radius
+            -moz-border-radius: 40px;
+            -webkit-border-radius: 40px;
+            border-radius: 40px;
+            border: 1px solid $secondary;
+            &:hover{
+                background: rgba(255, 255, 255, 0.4);
+                box-shadow: 1px 1px 5px #888888;
+                i{
+                    -webkit-animation: pulsate 1s ease-out;
+                    -webkit-animation-iteration-count: infinite;
+                }
+            }
+        }
+        @-webkit-keyframes pulsate {
+            0% {-webkit-transform: scale(0.9, 0.9);}
+            100% {-webkit-transform: scale(1.1, 1.1);}
+        }
+    }
 }
 
 #welcome-content{
+    z-index: -1;
+    padding: 1em;
     background: $light-gray;
+    text-align: center;
+    height:95vh;
+    .about-me{
+        padding-top: 1em;
+        .content{
+            text-align: left;
+            p{
+                font-size: 1em;
+            }
+            h5{
+                padding: 1em;
+                strong{
+                    padding-left: 1em;
+                    font-size: 1.3em;
+                }
+            }
+            .phrase{
+                text-align: center;
+                font-size: 1.5em;
+            }
+        }
+    }
 }

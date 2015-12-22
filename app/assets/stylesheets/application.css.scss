@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require fancybox
  *= require bootstrap_and_overrides
  *= require font-awesome
  *= require 'masonry/transitions'
@@ -174,6 +175,9 @@ p,ul,ol{
     display: none;
 }
 
+.sec-title{
+    font-family: 'Poiret One', cursive;
+}
 
 
  @import 'projects';
