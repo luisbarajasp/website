@@ -181,6 +181,7 @@ $red: #ff4c4c;
                 img{
                     border-top-left-radius: 8px;
                     border-top-right-radius: 8px;
+                    min-height: 160px;
                 }
                 .p_hover{
                     display: none;
@@ -249,7 +250,11 @@ $red: #ff4c4c;
     background: $white;
     text-align: center;
     height:91.8vh;
+    .contact{
+        padding-top: 1em;
+    }
     .contact-form{
+        padding-top: 1em;
         text-align: left;
     }
 }
