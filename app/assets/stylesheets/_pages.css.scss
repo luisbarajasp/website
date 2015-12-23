@@ -162,6 +162,19 @@ $red: #ff4c4c;
                 padding: 0;
                 border-top-left-radius: 8px;
                 border-top-right-radius: 8px;
+                .thum_img{
+                    width: 200px;
+                    overflow-x: hidden;
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                    img{
+                        margin-left: -15%;
+                        margin-right: -15%;
+                        border-top-left-radius: 8px;
+                        border-top-right-radius: 8px;
+                        min-height: 160px;
+                    }
+                }
                 .caption{
                     padding: 0;
                 }
@@ -177,11 +190,6 @@ $red: #ff4c4c;
                     display: block;
                     max-height: 785px;
                     overflow: hidden;
-                }
-                img{
-                    border-top-left-radius: 8px;
-                    border-top-right-radius: 8px;
-                    min-height: 160px;
                 }
                 .p_hover{
                     display: none;
@@ -233,6 +241,10 @@ $red: #ff4c4c;
 
             .p_desc{
                 p{
+                    text-align: left;
+                    font-size: .95em;
+                }
+                ul>li{
                     text-align: left;
                     font-size: .95em;
                 }

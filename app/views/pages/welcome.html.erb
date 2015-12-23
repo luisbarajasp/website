@@ -68,7 +68,9 @@
         <% @projects.each do |p| %>
             <div class="box col3">
               <div class="thumbnail">
-                   <%= image_tag(p.image.url(:medium)) %>
+                   <div class="thum_img">
+                       <%= image_tag(p.image.url(:medium)) %>
+                   </div>
                    <div class="caption">
                         <div class="p_title">
                             <h4><%= p.title %></h4>
@@ -110,7 +112,7 @@
                   </div>
                   <div class="links">
                       <a class="btn btn-default" onclick="javascript:window.open('<%= p.glink %>', '_blank')"><i class="fa fa-github"></i> View source code</a>
-                      <% if p.hlink %>
+                      <% if p.hlink? %>
                           <a class="btn btn-default" onclick="javascript:window.open('<%= p.hlink %>', '_blank')"><i class="fa fa-eye"></i> View it working</a>
                       <% end %>
                   </div>
