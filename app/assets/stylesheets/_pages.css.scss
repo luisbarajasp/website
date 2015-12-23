@@ -202,6 +202,9 @@ $red: #ff4c4c;
                             padding: 2em;
                             color: $white;
                         }
+                        p.language{
+                            color: $secondary;
+                        }
                     }
                     #grad {
                   		background: -webkit-linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
@@ -213,6 +216,11 @@ $red: #ff4c4c;
             }
         }
         .modal{
+            .language{
+                span{
+                    color: $principal;
+                }
+            }
             .p_img{
                 margin: 2em auto;
                 width: 80%;
@@ -224,8 +232,12 @@ $red: #ff4c4c;
 
             .p_desc{
                 p{
+                    text-align: left;
                     font-size: .95em;
                 }
+            }
+            .links{
+                padding-bottom: 1em;
             }
         }
     }

@@ -14,4 +14,5 @@ class Project < ActiveRecord::Base
     friendly_id :title, use: :slugged
 
     belongs_to :admin
+    belongs_to :language
 end

@@ -26,6 +26,18 @@
 		<%= f.label :description %> <br>
 		<%= f.text_area :description, class: "form-control" %>
 	</div>
+    <div class="form-group">
+		<%= f.label :title, "Language" %> <br>
+		<%= f.select :language_id, Language.all.collect {|x| [x.name, x.id]},     {:include_blank=> "Select Language..."}%>
+	</div>
+    <div class="form-group">
+		<%= f.label :glink, "Github Link" %> <br>
+		<%= f.text_field :glink, class: "form-control" %>
+	</div>
+    <div class="form-group">
+		<%= f.label :hlink, "Heroku Link" %> <br>
+		<%= f.text_field :hlink, class: "form-control" %>
+	</div>
 	<div class="form-group">
    	 	<%= f.submit "Submit", class: "btn btn-success" %>
  	</div>

@@ -1,0 +1,24 @@
+$principal: #648aa4;
+$secondary: #bacdd5;
+$dark: #424652;
+$white: #fff;
+$highlight: #FF884D;
+$light-gray: #ededed;
+$uLight-gray: #f9f9f9;
+$gray-logo: #dedede;
+$gray: #939393;
+$red: #ff4c4c;
+
+.languages{
+    text-align: center;
+    #admin_links{
+        a{
+            padding: 1em 0;
+            text-decoration: none;
+            color: $highlight;
+            &:hover{
+                color: $gray;
+            }
+        }
+    }
+}

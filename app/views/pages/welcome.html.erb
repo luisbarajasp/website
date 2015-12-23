@@ -78,6 +78,7 @@
                    <%= link_to "#project#{p.id}", :data => {:toggle=>"modal"} do %>
                        <div id="grad" class="p_hover">
                             <p><%= p.subtitle %></p>
+                            <p class="language"><%= p.language.name %></p>
                        </div>
                    <% end %>
                 </div>
@@ -89,14 +90,15 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title" id="myModalLabel"><%= p.title %></h4>
-                    <h4 class="modal-title" id="myModalLabel"><%= p.subtitle %></h6>
+                    <h2 class="modal-title" id="myModalLabel"><%= p.title %></h2>
+                    <h4 class="modal-title" id="myModalLabel"><%= p.subtitle %></h4>
                     <% if admin_signed_in? %>
                         <div class="admin-btn">
                             <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_project_path(p) %>
                             <%= link_to '<i class="fa fa-trash"></i>'.html_safe, project_path(p), method: :delete, data: {confirm: "Are you sure?"} %>
                         </div>
                     <% end %>
+                    <h4 class="modal-title language" id="myModalLabel">Language: <span><%= p.language.name %></span></h4>
                   </div>
                   <div class="modal-body wrapper">
                     <div class="p_img">
@@ -105,6 +107,10 @@
                     <div class="p_desc">
                         <p><%= markdown p.description %></p>
                     </div>
+                  </div>
+                  <div class="links">
+                      <a class="btn btn-default" onclick="javascript:window.open('<%= p.glink %>', '_blank')"><i class="fa fa-github"></i> View source code</a>
+                      <a class="btn btn-default" onclick="javascript:window.open('<%= p.hlink %>', '_blank')"><i class="fa fa-eye"></i> View it working</a>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

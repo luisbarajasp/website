@@ -1,0 +1,35 @@
+<div class="languages skinny_wrapper clearfix">
+	<h1 id="sec-title">Languages</h1>
+
+	<div id="admin_links" class="clearfix">
+		<%= link_to "Add language", new_language_path %>
+	</div>
+
+
+  <table class="table table-striped table-bordered">
+    <tr>
+      <th class="center">Language</th>
+      <th class="center">Actions</th>
+    </tr>
+    <% @languages.each do |language| %>
+      <tr>
+        <td><%= language.name %></td>
+        <td>
+          <div class="dropdown center">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Action
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><%= link_to "Editar", edit_language_path(language), class: "btn btn-link" %></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to 'Eliminar', language, method: :delete, data: { confirm: 'Estás seguro de eliminar?' }, class: "btn btn-link" %></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <% end %>
+  </table>
+
+  <br>
+</div>

@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'pages/welcome'
+    resources :languages, except: [:show]
 
-  devise_for :admins
+    get 'pages/welcome'
+
+    devise_for :admins
+    #, :skip => :registrations
     resources :projects
 
     get '*path' => redirect('/')

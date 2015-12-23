@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151222233857) do
+ActiveRecord::Schema.define(version: 20151223043400) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -48,6 +48,12 @@ ActiveRecord::Schema.define(version: 20151222233857) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
+  create_table "languages", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -60,6 +66,9 @@ ActiveRecord::Schema.define(version: 20151222233857) do
     t.integer  "admin_id"
     t.string   "slug"
     t.string   "subtitle"
+    t.integer  "language_id"
+    t.string   "glink"
+    t.string   "hlink"
   end
 
   add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true

@@ -25,6 +25,21 @@
             <i id="icon" class="fa fa-bars"></i>
         </div> -->
         <nav class="navbar">
+            <% if admin_signed_in? %>
+                <%= link_to "Home", root_path %>
+                <!-- Single button -->
+				<div class="btn-group">
+				  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Luis</i><span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+                    <li><%= link_to "New Project", new_project_path %></li>
+				    <li><%= link_to "Languages", languages_path %></li>
+	              	<li role="separator" class="divider"></li>
+	              	<li><%= link_to "Sign Out", destroy_admin_session_path, method: :delete %></li>
+				  </ul>
+				</div>
+            <% end %>
             <a class="inactive page-scroll" href="#about-me"><i class="fa fa-child"></i>&nbsp; About Me</a>
             <a class="inactive page-scroll" href="#projects-content"><i class="fa fa-folder"></i>&nbsp; Projects</a>
             <a class="inactive page-scroll" href="#contact"><i class="fa fa-paper-plane"></i>&nbsp; Contact Me</a>
