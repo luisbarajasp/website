@@ -19,7 +19,7 @@ $red: #ff4c4c;
     overflow:auto;
     width: 100%;
     z-index: 2;
-    margin-top: -65px;
+    margin-top: 0;
     padding: 2em 0;
     box-shadow: 1px 1px 5px #888888;
     height:100vh;
@@ -245,8 +245,11 @@ $red: #ff4c4c;
 
 #contact{
     z-index: -1;
-    padding: 1em;
-    background: $dark;
+    padding: .5em;
+    background: $white;
     text-align: center;
-    height:95vh;
+    height:91.8vh;
+    .contact-form{
+        text-align: left;
+    }
 }

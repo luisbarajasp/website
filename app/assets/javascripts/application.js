@@ -71,6 +71,16 @@ $(document).ready(function(){
         event.preventDefault();
     });
 
+    $(window).on("scroll", function() {
+    	var scrollHeight = $(document).height();
+    	var scrollPosition = $(window).height() + $(window).scrollTop();
+    	if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+    	    // when scroll to bottom of the page
+            $('.contact').fadeIn();
+    	}else{
+            $('.contact').fadeOut();
+        }
+    });
 });
 
 function onScroll(event){

@@ -209,6 +209,12 @@ p,ul,ol{
     font-family: 'Poiret One', cursive;
 }
 
+.alert{
+    position: fixed;
+    top: 0;
+    left: 10%;
+    width: 80%;
+}
 
  @import 'projects';
  @import 'pages';

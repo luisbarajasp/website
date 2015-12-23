@@ -23,6 +23,8 @@ gem "paperclip-dropbox", ">= 1.1.7"
 gem "figaro"
 gem 'fancybox2-rails', '~> 0.2.8'
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 
 group :development, :test do
@@ -33,6 +35,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'letter_opener', '~> 1.4', '>= 1.4.1'
 end
 
 group :production do
