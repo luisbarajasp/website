@@ -210,10 +210,15 @@ p,ul,ol{
 }
 
 .alert{
+    z-index: 300;
     position: fixed;
-    top: 0;
+    top: 65px;
     left: 10%;
     width: 80%;
+    ul>li{
+        list-style: none;
+        font-size: 1em;
+    }
 }
 
  @import 'projects';
