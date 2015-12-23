@@ -41,10 +41,12 @@ $(document).ready(function(){
 
    $(document).on("scroll", onScroll);
 
+   $('[data-toggle="tooltip"]').tooltip();
+
    $('a.page-scroll').click(function(event){
        var anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top - 65
+            scrollTop: $(anchor.attr('href')).offset().top - 60
         }, 1000);
         event.preventDefault();
    });
@@ -78,6 +80,7 @@ function onScroll(event){
         var refElement = $(currLink.attr("href"));
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos - 80) {
             $('.navbar a').removeClass("active");
+            $('.navbar a').addClass("inactive");
             currLink.removeClass("inactive");
             currLink.addClass("active");
         }

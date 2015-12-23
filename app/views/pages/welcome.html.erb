@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="btn-about col-md-12">
-            <a id="btn-about" href="#about-me"><i class="fa fa-angle-double-down"></i></a>
+            <a id="btn-about" href="#about-me" data-toggle="tooltip" data-placement="top" title="About Me"><i class="fa fa-angle-double-down"></i></a>
         </div>
 </section>
 
@@ -63,23 +63,59 @@
 </section>
 
 <section id="projects-content">
+    <h1 class="sec-title">Projects I've Made</h1>
     <div id="projects" class="index wrapper wrapper_padding transitions-enabled">
         <% @projects.each do |p| %>
-        <div class="box col3">
-          <div class="thumbnail">
-               <%= link_to image_tag(p.image.url(:medium)), p %>
-               <div class="caption">
-                    <div class="pin_title">
-                        <h4><%= p.title %></h4>
-                    </div>
-                    <% if p.description? %>
-                        <div class="pin_desc">
-                            <p><%= p.description %></p>
+            <div class="box col3">
+              <div class="thumbnail">
+                   <%= image_tag(p.image.url(:medium)) %>
+                   <div class="caption">
+                        <div class="p_title">
+                            <h4><%= p.title %></h4>
+                        </div>
+                   </div>
+                   <!-- Link trigger modal -->
+                   <%= link_to "#project#{p.id}", :data => {:toggle=>"modal"} do %>
+                       <div id="grad" class="p_hover">
+                            <p><%= p.subtitle %></p>
+                       </div>
+                   <% end %>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="project<%= p.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title" id="myModalLabel"><%= p.title %></h4>
+                    <h4 class="modal-title" id="myModalLabel"><%= p.subtitle %></h6>
+                    <% if admin_signed_in? %>
+                        <div class="admin-btn">
+                            <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_project_path(p) %>
+                            <%= link_to '<i class="fa fa-trash"></i>'.html_safe, project_path(p), method: :delete, data: {confirm: "Are you sure?"} %>
                         </div>
                     <% end %>
-               </div>
+                  </div>
+                  <div class="modal-body wrapper">
+                    <div class="p_img">
+                        <%= image_tag(p.image.url)%>
+                    </div>
+                    <div class="p_desc">
+                        <p><%= markdown p.description %></p>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
         <% end %>
     </div>
+</section>
+
+<section id="contact">
+
 </section>

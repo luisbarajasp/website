@@ -21,6 +21,7 @@ gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 gem "paperclip-dropbox", ">= 1.1.7"
 gem "figaro"
 gem 'fancybox2-rails', '~> 0.2.8'
+gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
 
 group :development, :test do
