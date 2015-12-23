@@ -110,7 +110,9 @@
                   </div>
                   <div class="links">
                       <a class="btn btn-default" onclick="javascript:window.open('<%= p.glink %>', '_blank')"><i class="fa fa-github"></i> View source code</a>
-                      <a class="btn btn-default" onclick="javascript:window.open('<%= p.hlink %>', '_blank')"><i class="fa fa-eye"></i> View it working</a>
+                      <% if p.hlink %>
+                          <a class="btn btn-default" onclick="javascript:window.open('<%= p.hlink %>', '_blank')"><i class="fa fa-eye"></i> View it working</a>
+                      <% end %>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
