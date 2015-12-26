@@ -151,12 +151,21 @@ $red: #ff4c4c;
     overflow:auto;
     text-align: center;
     height:95vh;
+    .btn-group{
+        z-index: 2;
+        label.btn>input{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
     h1.sec-title{
         color: $white;
     }
     .index{
+        padding-top: 1em;
         .col3{
-            padding: 0 .5em;
+            padding: 4em .5em;
             .thumbnail{
                 position:relative;
                 padding: 0;

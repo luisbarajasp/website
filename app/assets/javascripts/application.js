@@ -81,6 +81,24 @@ $(document).ready(function(){
             $('.contact').fadeOut();
         }
     });
+
+    $('.btn-group input').on('change',function(){
+        var selected = $('input[name=options]:checked', '.btn-group').val();
+
+        if (selected == 'all'){
+            $('.thumbnail').fadeIn(400);
+        }else{
+            $('.thumbnail').each(function(){
+                var id = $(this).attr('id');
+
+                if(id == selected){
+                    $(this).fadeIn(400);
+                }else{
+                    $(this).fadeOut(400);
+                }
+            });
+        }
+    });
 });
 
 function onScroll(event){

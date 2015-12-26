@@ -77,9 +77,19 @@
 <section id="projects-content">
     <h1 class="sec-title">Projects I've Made</h1>
     <div id="projects" class="index wrapper wrapper_padding transitions-enabled">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default active">
+              <input type="radio" name="options" value="all" autocomplete="off" checked> All
+            </label>
+          <% @languages.each do |language| %>
+              <label class="btn btn-default">
+                <input type="radio" name="options" value="<%= language.name.split[0] %>" autocomplete="off"> <%= language.name %>
+              </label>
+          <% end %>
+        </div>
         <% @projects.each do |p| %>
             <div class="box col3">
-              <div class="thumbnail">
+              <div id="<%= p.language.name.split[0] %>" class="thumbnail">
                    <div class="thum_img">
                        <%= image_tag(p.image.url(:medium)) %>
                    </div>
