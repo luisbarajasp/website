@@ -21,9 +21,9 @@
             <a onclick="javascript:window.open('https://www.facebook.com/luisbarajasp', '_blank')"><i class="fa fa-facebook"></i></a>
             <a href="mailto:luisbarajasp@gmail.com"><i class="fa fa-envelope"></i></a>
         </div>
-        <!-- <div class="btn-navigation" onclick="return toggleNav()">
+        <div class="btn-navigation" onclick="return toggleNav()">
             <i id="icon" class="fa fa-bars"></i>
-        </div> -->
+        </div>
         <nav class="navbar">
             <% if admin_signed_in? %>
                 <%= link_to "Home", root_path %>
@@ -45,6 +45,18 @@
             <a class="inactive page-scroll" href="#contact"><i class="fa fa-paper-plane"></i>&nbsp; Contact Me</a>
         </nav>
     </header>
+
+    <div class="navigation-menu">
+        <div class="link page-scroll-m">
+            <a href="#about-me">About Me</a><br>
+        </div>
+        <div class="link page-scroll-m">
+            <a href="#projects-content">Projects</a><br>
+        </div>
+        <div class="link page-scroll-m">
+            <a href="#contact">Contact Me</a><br>
+        </div>
+    </div>
 
     <% if notice %>
           <div class="alert alert-success">

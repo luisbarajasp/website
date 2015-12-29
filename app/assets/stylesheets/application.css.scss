@@ -105,10 +105,6 @@ p,ul,ol{
 	margin: 0 0 1.6em 0;
 }
 
-.navbar-shrink{
-
-}
-
 #main-navigation{
     position: fixed;
     top:0;
@@ -136,6 +132,7 @@ p,ul,ol{
     .social{
         font-size: 1.5em;
         display: inline-block;
+        vertical-align: middle;
         a{
             color: $gray;
             padding: .5em;
@@ -146,30 +143,6 @@ p,ul,ol{
             }
         }
     }
-    // .btn-navigation{
-    //     font-size: 2em;
-    //     float: right;
-    //     display: inline-block;
-    //     text-align: center;
-    //     width: 10%;
-    //     height: 100%;
-    //     i{
-    //         border: 1px solid $gray;
-    //         //Border radius
-    //         -moz-border-radius: 4px;
-    //         -webkit-border-radius: 4px;
-    //         border-radius: 4px;
-    //         padding-top: 2.5%;
-    //         background: $light-gray;
-    //         margin-top: 10%;
-    //         height: 60%;
-    //         width: 40%;
-    //         cursor: pointer;
-    //         &:hover{
-    //             background: $gray;
-    //         }
-    //     }
-    // }
     .navbar{
         float: right;
         display: inline-block;
@@ -198,13 +171,73 @@ p,ul,ol{
     }
 }
 
-// .navigation-menu{
-//     position: fixed;
-//     top: 65px;
-//     right: 5px;
-//     width: 200px;
-//     display: none;
-// }
+.btn-navigation{
+    font-size: 4vh;
+    float: right;
+    display: inline-block;
+    text-align: center;
+    width: 10vh;
+    color: $gray;
+    height: 80%;
+    i{
+        border: 1px solid $gray;
+        //Border radius
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        padding-top: .5vh;
+        margin-top: 10%;
+        height: 80%;
+        width: 60%;
+    }
+    display: none;
+}
+
+.navigation-menu{
+    font-size: 3.5vh;
+    position: fixed;
+    top: 8%;
+    right: 0px;
+    width: 100%;
+    z-index: 500;
+    background: $light-gray;
+    display: none;
+    height: inherit;
+    .link{
+        border-bottom: 1px solid $uLight-gray;
+        padding: 2vh;
+    }
+    a{
+        height: auto;
+        width: auto;
+        color: $gray;
+        text-decoration: none;
+        &:hover{
+            color: $dark;
+        }
+    }
+    border-bottom: 1px solid $gray;
+}
+
+@media (max-width:991px){
+    #main-navigation{
+        .brand-logo{
+            padding-left: 2em;
+        }
+        height: 8%;
+        .navbar{
+            display: none;
+        }
+        .social{
+            vertical-align: middle;
+            font-size: 3vh;
+            margin-left: 3em;
+        }
+        .btn-navigation{
+            display: block;
+        }
+    }
+}
 
 .sec-title{
     font-family: 'Poiret One', cursive;
