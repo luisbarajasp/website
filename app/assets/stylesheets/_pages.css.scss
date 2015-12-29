@@ -23,6 +23,9 @@ $red: #ff4c4c;
     padding: 2em 0;
     box-shadow: 1px 1px 5px #888888;
     height:100vh;
+    .profile-img-m{
+        display: none;
+    }
     img{
         margin-top: 55px;
     }
@@ -35,6 +38,9 @@ $red: #ff4c4c;
         h4{
             color: $white;
             padding: .5em 0;
+        }
+        .resume-m{
+            display: none;
         }
         .clearfix{
             padding: .3em 0 1em 0;
@@ -83,6 +89,9 @@ $red: #ff4c4c;
             border-right: 1px dotted $secondary;
         }
     }
+    .mobile{
+        display: none;
+    }
     .btn-about{
         padding-top: 2em;
         a{
@@ -122,6 +131,9 @@ $red: #ff4c4c;
         padding-top: 1em;
         .content{
             text-align: left;
+            .mobile{
+                display: none;
+            }
             p{
                 font-size: 1em;
             }
@@ -277,5 +289,89 @@ $red: #ff4c4c;
     .contact-form{
         padding-top: 1em;
         text-align: left;
+    }
+}
+
+@media (max-width:991px){
+
+}
+
+@media only screen
+    and (max-device-width: 640px),
+    only screen and (max-device-width: 667px),
+    only screen and (max-width: 480px)
+{
+    #profile{
+        height: auto;
+        background: linear-gradient(rgba(73,155,234, 0.7),rgba(16, 63, 116, 0.7));
+        .profile-img{
+            display: none;
+        }
+        .profile-img-m{
+            display: block;
+            img{
+                margin-top: 9vh;
+                width: 60vw;
+                height: 60vw;
+            }
+        }
+        h3{
+            font-size: 4vh;
+        }
+        h4{
+            font-size: 2vh;
+        }
+        h5{
+            font-size: 1.5vh;
+        }
+        .info{
+            padding-bottom: 1vh;
+            .resume{
+                display: none;
+            }
+            .resume-m{
+                display: block;
+                .resume-btn{
+                    font-size: 1.5vh;
+                }
+            }
+        }
+        .desktop{
+            display: none;
+        }
+        .mobile{
+            display: block;
+        }
+    }
+
+    .btn-about{
+        display: none;
+    }
+
+    h1.sec-title{
+        font-size: 3vh;
+    }
+
+    #about-content{
+        h5{
+            font-size: 1.2vh;
+        }
+        #about-me{
+            .content{
+                p{
+                    font-size: 1.2vh;
+                }
+                .desktop{
+                    display: none;
+                }
+                .mobile{
+                    display: block;
+                }
+            }
+        }
+    }
+    #projects-content{
+        height: auto;
+        background: linear-gradient(rgba(0,0,0, 0.7),rgba(55, 53, 53, 0.79));
     }
 }

@@ -2,34 +2,66 @@
         <div class="profile-img clearfix">
             <%= image_tag @admin.avatar.url(:medium), class: "img-rounded" %>
         </div>
+        <div class="profile-img-m clearfix">
+            <%= image_tag @admin.avatar.url, class: "img-rounded" %>
+        </div>
         <div class="info clearfix">
             <h3>Luis Eduardo Barajas Pérez</h3>
             <h4>19 years old</h4>
             <h4>Mexico City</h4>
-            <div class="clearfix">
+            <div class="resume clearfix">
                 <%= link_to '<i class="fa fa-graduation-cap"></i>&nbsp; Resume'.html_safe, image_path("resume.pdf"), class: "fancybox resume-btn" %>
             </div>
-        </div>
-        <div class="education col-md-4 col-md-offset-2">
-            <h4><strong>Education</strong></h4>
-            <h5>ITESM</h5>
-            <ul>
-                <h5><li>Computer Science and Technology</li></h5>
-                <h5><li>Expected graduation date: December 2019</li></h5>
-                <h5><li>GPA: 94/100</li></h5>
-            </ul>
-        </div>
-        <div class="programming-lang col-md-4">
-            <h4><strong>Programming Languages</strong></h4>
-            <div class="first col-md-4 col-md-offset-2">
-                <h5>HTML/CSS</h5>
-                <h5>Swift</h5>
-                <h5>Ruby on Rails</h5>
+            <div class="resume-m clearfix">
+                <%= link_to '<i class="fa fa-graduation-cap"></i>&nbsp; Resume'.html_safe, image_path("resume.pdf"), class: "resume-btn" %>
             </div>
-            <div class="col-md-4">
-                <h5>C</h5>
-                <h5>Java</h5>
-                <h5>JavaScript</h5>
+        </div>
+        <div class="desktop">
+            <div class="education col-md-4 col-md-offset-2 col-sm-6">
+                <h4><strong>Education</strong></h4>
+                <h5>ITESM</h5>
+                <ul>
+                    <h5><li>Computer Science and Technology</li></h5>
+                    <h5><li>Expected graduation date: December 2019</li></h5>
+                    <h5><li>GPA: 94/100</li></h5>
+                </ul>
+            </div>
+            <div class="programming-lang col-md-4 col-sm-6">
+                <h4><strong>Programming Languages</strong></h4>
+                <div class="first col-md-4 col-md-offset-2">
+                    <h5>HTML/CSS</h5>
+                    <h5>Swift</h5>
+                    <h5>Ruby on Rails</h5>
+                </div>
+                <div class="col-md-4">
+                    <h5>C</h5>
+                    <h5>Java</h5>
+                    <h5>JavaScript</h5>
+                </div>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="education col-md-4 col-md-offset-2">
+                <h4><strong>Education</strong></h4>
+                <h5>ITESM</h5>
+                <ul>
+                    <li><h5>Computer Science and Technology</h5></li>
+                    <li><h5>Expected graduation date: December 2019</h5></li>
+                    <li><h5>GPA: 94/100</h5></li>
+                </ul>
+            </div>
+            <div class="programming-lang col-md-4">
+                <h4><strong>Programming Languages</strong></h4>
+                <div class="first col-sm-4 col-sm-offset-2">
+                    <h5>HTML/CSS</h5>
+                    <h5>Swift</h5>
+                    <h5>Ruby on Rails</h5>
+                </div>
+                <div class="col-sm-4">
+                    <h5>C</h5>
+                    <h5>Java</h5>
+                    <h5>JavaScript</h5>
+                </div>
             </div>
         </div>
         <div class="btn-about col-md-12">
@@ -45,7 +77,25 @@
                 <p>
                     I was born and have always lived in Mexico City. The things that I love the most are: <br>
                 </p>
-                <div class="clearfix">
+                <div class="desktop clearfix">
+                    <div class="col-md-6 col-sm-6">
+                        <h5><i class="fa fa-circle-thin"></i> <strong>Code  <i class="fa fa-code"></i></strong></h5>
+                        <h5><i class="fa fa-circle-thin"></i> <strong>Football  <i class="icon-football"></i></strong></h5>
+                        <h5><i class="fa fa-circle-thin"></i> <strong>Be With My Family  <i class="fa fa-users"></i></strong></h5>
+                        <h5><i class="fa fa-circle-thin"></i> <strong>Code  <i class="fa fa-code"></i></strong></h5>
+                        <h5><i class="fa fa-circle-thin"></i> <strong>Learn New Things  <i class="fa fa-bookmark-o"></i></strong></h5>
+                        <h5><i class="fa fa-circle-thin"></i> <strong>Tech Stuff  <i class="fa fa-wifi"></i></strong></h5>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <h5><i class="fa fa-circle-thin"></i> <strong>Music  <i class="fa fa-music"></i></strong></h5>
+                        <h5><i class="fa fa-circle-thin"></i> <strong>Code  <i class="fa fa-code"></i></strong></h5>
+                        <h5><i class="fa fa-circle-thin"></i> <strong>Play Video Games  <i class="fa fa-gamepad"></i></strong></h5>
+                        <h5><i class="fa fa-circle-thin"></i> <strong>Accomplish New Challenges  <i class="fa fa-trophy"></i></strong></h5>
+                        <h5><i class="fa fa-circle-thin"></i> <strong>Party  <i class="fa fa-beer"></i></strong></h5>
+                        <h5><i class="fa fa-circle-thin"></i> <strong>& More Code...  <i class="fa fa-code"></i></strong></h5>
+                    </div>
+                </div>
+                <div class="mobile clearfix">
                     <div class="col-md-6">
                         <h5><i class="fa fa-circle-thin"></i> <strong>Code  <i class="fa fa-code"></i></strong></h5>
                         <h5><i class="fa fa-circle-thin"></i> <strong>Football  <i class="icon-football"></i></strong></h5>
