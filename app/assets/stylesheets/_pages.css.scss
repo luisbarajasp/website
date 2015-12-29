@@ -174,6 +174,9 @@ $red: #ff4c4c;
     h1.sec-title{
         color: $white;
     }
+    .mobile{
+        display: none;
+    }
     .index{
         padding-top: 1em;
         .col3{
@@ -371,7 +374,130 @@ $red: #ff4c4c;
         }
     }
     #projects-content{
+        .btn-group{
+            display: none;
+        }
         height: auto;
         background: linear-gradient(rgba(0,0,0, 0.7),rgba(55, 53, 53, 0.79));
+        .index{
+            display: none;
+        }
+        .mobile{
+            display: block;
+            padding-top: 1em;
+            .col3{
+                padding: 2em 0;
+                .thumbnail{
+                    width: 90vw;
+                    position:relative;
+                    padding: 0;
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                    .thum_img{
+                        width: 90vw;
+                        height: auto;
+                        border-top-left-radius: 8px;
+                        border-top-right-radius: 8px;
+                        img{
+                            width: 90vw;
+                            height: auto;
+                            border-top-left-radius: 8px;
+                            border-top-right-radius: 8px;
+                        }
+                    }
+                    .caption{
+                        padding: 0;
+                    }
+                    .p_title{
+                        padding: 9px;
+                        h4{
+                            color: $white;
+                            font-weight: 700;
+                            font-size: 2.3vh;
+                        }
+                        border-bottom: 1px solid $light-gray;
+                    }
+                    a{
+                        display: block;
+                        max-height: 785px;
+                        overflow: hidden;
+                    }
+                    .p_hover{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        top:0;
+                        right:0;
+                        font-size: 1.5em;
+                        position: absolute;
+                        //Border radius
+                        -moz-border-radius: 8px;
+                        -webkit-border-radius: 8px;
+                        border-radius: 8px;
+                        p{
+                            padding: .5em;
+                            color: $white;
+                            font-size: 2vh;
+                        }
+                        p.language{
+                            color: $secondary;
+                        }
+                    }
+                    #grad {
+                  		background: -webkit-linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
+                  		background: -o-linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
+                  		background: -moz-linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+                 		background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,0)); /* Standard syntax */
+                	}
+                }
+            }
+            .modal-dialog{
+                width: 100vw;
+                height: 100vh;
+                h2{
+                    font-size: 2.3vh;
+                    font-weight: 700;
+                }
+                h4{
+                    font-size: 1.9vh;
+                    span{
+                        color: $secondary;
+                    }
+                }
+                .p_img{
+                    width: 100%;
+                    height: auto;
+                    img{
+                        width: 90%;
+                        height: auto;
+                    }
+                }
+                .p_desc{
+                    p{
+                        font-size: 1.5vh;
+                        text-align: left;
+                    }
+                    ul>li{
+                        font-size: 1.5vh;
+                        text-align: left;
+                    }
+                }
+                .links{
+                    a{
+                        font-size: 1.5vh;
+                    }
+                }
+                .modal-header{
+                    .close{
+                        font-size: 1.5vh;
+                    }
+                }
+                .modal-footer{
+                    button{
+                        font-size: 1.5vh;
+                    }
+                }
+            }
+        }
     }
 }

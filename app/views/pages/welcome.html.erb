@@ -196,6 +196,75 @@
             </div>
         <% end %>
     </div>
+
+    <div class="mobile wrapper wrapper_padding">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default active">
+              <input type="radio" name="options" value="all" autocomplete="off" checked> All
+            </label>
+          <% @languages.each do |language| %>
+              <label class="btn btn-default">
+                <input type="radio" name="options" value="<%= language.name.split[0] %>" autocomplete="off"> <%= language.name %>
+              </label>
+          <% end %>
+        </div>
+        <% @projects.each do |p| %>
+            <div class="box col3">
+              <div id="<%= p.language.name.split[0] %>" class="thumbnail">
+                   <div class="thum_img">
+                       <%= image_tag(p.image.url) %>
+                   </div>
+                   <!-- Link trigger modal -->
+                   <%= link_to "#project_mobile_#{p.id}", :data => {:toggle=>"modal"} do %>
+                       <div id="grad" class="p_hover">
+                           <div class="p_title">
+                               <h4><%= p.title %></h4>
+                           </div>
+                            <p><%= p.subtitle %></p>
+                            <p class="language"><%= p.language.name %></p>
+                       </div>
+                   <% end %>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="project_mobile_<%= p.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title" id="myModalLabel"><%= p.title %></h2>
+                    <h4 class="modal-title" id="myModalLabel"><%= p.subtitle %></h4>
+                    <% if admin_signed_in? %>
+                        <div class="admin-btn">
+                            <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_project_path(p) %>
+                            <%= link_to '<i class="fa fa-trash"></i>'.html_safe, project_path(p), method: :delete, data: {confirm: "Are you sure?"} %>
+                        </div>
+                    <% end %>
+                    <h4 class="modal-title language" id="myModalLabel">Language: <span><%= p.language.name %></span></h4>
+                  </div>
+                  <div class="modal-body wrapper">
+                    <div class="p_img">
+                        <%= image_tag(p.image.url)%>
+                    </div>
+                    <div class="p_desc">
+                        <p><%= markdown p.description %></p>
+                    </div>
+                  </div>
+                  <div class="links">
+                      <a class="btn btn-default" onclick="javascript:window.open('<%= p.glink %>', '_blank')"><i class="fa fa-github"></i> View source code</a>
+                      <% if p.hlink? %>
+                          <a class="btn btn-default" onclick="javascript:window.open('<%= p.hlink %>', '_blank')"><i class="fa fa-eye"></i> View it working</a>
+                      <% end %>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <% end %>
+    </div>
 </section>
 
 <section id="contact">
