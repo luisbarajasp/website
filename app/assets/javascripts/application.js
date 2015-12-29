@@ -86,15 +86,15 @@ $(document).ready(function(){
         var selected = $('input[name=options]:checked', '.btn-group').val();
 
         if (selected == 'all'){
-            $('.thumbnail').show(800);
+            $('.thumbnail').fadeIn(800);
         }else{
             $('.thumbnail').each(function(){
                 var id = $(this).attr('id');
 
                 if(id == selected){
-                    $(this).show(800);
+                    $(this).fadeIn(800);
                 }else{
-                    $(this).hide(800);
+                    $(this).fadeOut(800);
                 }
             });
         }
