@@ -302,7 +302,8 @@ $red: #ff4c4c;
 @media only screen
     and (max-device-width: 640px),
     only screen and (max-device-width: 667px),
-    only screen and (max-width: 480px)
+    only screen and (max-width: 480px),
+    only screen and (max-width: 768px)
 {
     #profile{
         height: auto;
@@ -498,6 +499,16 @@ $red: #ff4c4c;
                     }
                 }
             }
+        }
+    }
+    #contact{
+        height:90vh;
+        h3{
+            font-size: 1.7vh;
+        }
+        font-size: 1.5vh;
+        .contact-form{
+            display: block;
         }
     }
 }

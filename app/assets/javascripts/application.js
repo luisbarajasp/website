@@ -83,13 +83,27 @@ $(document).ready(function(){
     });
 
     $(window).on("scroll", function() {
-    	var scrollHeight = $(document).height();
-    	var scrollPosition = $(window).height() + $(window).scrollTop();
-    	if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-    	    // when scroll to bottom of the page
-            $('.contact').fadeIn();
-    	}else{
-            $('.contact').fadeOut();
+        var deviceAgent = navigator.userAgent.toLowerCase();
+
+        var isTouchDevice = ('ontouchstart' in document.documentElement) ||
+        (deviceAgent.match(/(iphone|ipod|ipad)/) ||
+        deviceAgent.match(/(android)/)  ||
+        deviceAgent.match(/(iemobile)/) ||
+        deviceAgent.match(/iphone/i) ||
+        deviceAgent.match(/ipad/i) ||
+        deviceAgent.match(/ipod/i) ||
+        deviceAgent.match(/blackberry/i) ||
+        deviceAgent.match(/bada/i));
+
+    	if(!isTouchDevice){
+            var scrollHeight = $(document).height();
+        	var scrollPosition = $(window).height() + $(window).scrollTop();
+        	if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+        	    // when scroll to bottom of the page
+                $('.contact').fadeIn();
+        	}else{
+                $('.contact').fadeOut();
+            }
         }
     });
 
