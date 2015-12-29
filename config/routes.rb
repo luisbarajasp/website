@@ -6,8 +6,7 @@ Rails.application.routes.draw do
 
     get 'pages/welcome'
 
-    devise_for :admins
-    #, :skip => :registrations
+    devise_for :admins, :skip => :registrations
     resources :projects
 
     get '*path' => redirect('/')
