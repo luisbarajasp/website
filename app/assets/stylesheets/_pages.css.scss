@@ -126,7 +126,7 @@ $red: #ff4c4c;
     padding: 1em;
     background: $light-gray;
     text-align: center;
-    height:95vh;
+    height: 95vh;
     #about-me{
         padding-top: 1em;
         .content{
@@ -357,6 +357,7 @@ $red: #ff4c4c;
     }
 
     #about-content{
+        height: auto;
         h5{
             font-size: 1.2vh;
         }
@@ -389,18 +390,18 @@ $red: #ff4c4c;
             .col3{
                 padding: 2em 0;
                 .thumbnail{
-                    width: 90vw;
+                    width: 83vw;
                     position:relative;
                     padding: 0;
                     border-top-left-radius: 8px;
                     border-top-right-radius: 8px;
                     .thum_img{
-                        width: 90vw;
+                        width: 83vw;
                         height: auto;
                         border-top-left-radius: 8px;
                         border-top-right-radius: 8px;
                         img{
-                            width: 90vw;
+                            width: 82vw;
                             height: auto;
                             border-top-left-radius: 8px;
                             border-top-right-radius: 8px;
