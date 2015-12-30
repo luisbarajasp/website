@@ -12,51 +12,56 @@
 <body>
 
     <header id="main-navigation" class="clearfix">
-        <div class="brand-logo">
-            <a id="logo" href="#page-top"><%= image_tag "logo.png", class: "img-circle" %></a>
-        </div>
-        <div class="social">
-            <a onclick="javascript:window.open('https://github.com/luisbarajasp', '_blank')"><i class="fa fa-github"></i></a>
-            <a onclick="javascript:window.open('https://twitter.com/luis_barajasp', '_blank')"><i class="fa fa-twitter"></i></a>
-            <a onclick="javascript:window.open('https://www.facebook.com/luisbarajasp', '_blank')"><i class="fa fa-facebook"></i></a>
-            <a href="mailto:luisbarajasp@gmail.com"><i class="fa fa-envelope"></i></a>
-        </div>
-        <div class="btn-navigation" onclick="return toggleNav()">
-            <i id="icon" class="fa fa-bars"></i>
-        </div>
-        <nav class="navbar">
-            <% if admin_signed_in? %>
-                <%= link_to "Home", root_path %>
-                <!-- Single button -->
-				<div class="btn-group">
-				  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    Luis</i><span class="caret"></span>
-				  </button>
-				  <ul class="dropdown-menu">
-                    <li><%= link_to "New Project", new_project_path %></li>
-				    <li><%= link_to "Languages", languages_path %></li>
-	              	<li role="separator" class="divider"></li>
-	              	<li><%= link_to "Sign Out", destroy_admin_session_path, method: :delete %></li>
-				  </ul>
-				</div>
-            <% end %>
-            <a class="inactive page-scroll" href="#about-me"><i class="fa fa-child"></i>&nbsp; About Me</a>
-            <a class="inactive page-scroll" href="#projects-content"><i class="fa fa-folder"></i>&nbsp; Projects</a>
-            <a class="inactive page-scroll" href="#contact"><i class="fa fa-paper-plane"></i>&nbsp; Contact Me</a>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <div class="brand-logo">
+                  <a id="logo" class="navbar-brand" href="#page-top">
+                      <%= image_tag "logo.png", class: "img-circle" %>
+                  </a>
+              </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li class="social">
+                      <a onclick="javascript:window.open('https://github.com/luisbarajasp', '_blank')"><i class="fa fa-github"></i></a>
+                      <a onclick="javascript:window.open('https://twitter.com/luis_barajasp', '_blank')"><i class="fa fa-twitter"></i></a>
+                      <a onclick="javascript:window.open('https://www.facebook.com/luisbarajasp', '_blank')"><i class="fa fa-facebook"></i></a>
+                      <a href="mailto:luisbarajasp@gmail.com"><i class="fa fa-envelope"></i></a>
+                  </li>
+             </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <% if admin_signed_in? %>
+                    <li><%= link_to "Home", root_path %></li>
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Luis<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><%= link_to "New Project", new_project_path %></li>
+                        <li><%= link_to "Languages", languages_path %></li>
+                        <li role="separator" class="divider"></li>
+                        <li><%= link_to "Sign Out", destroy_admin_session_path, method: :delete %></li>
+                      </ul>
+                    </li>
+                <% end %>
+
+                <li><a class="inactive page-scroll" href="#about-me"><i class="fa fa-child"></i>&nbsp; About Me</a></li>
+                <li><a class="inactive page-scroll" href="#projects-content"><i class="fa fa-folder"></i>&nbsp; Projects</a></li>
+                <li><a class="inactive page-scroll" href="#contact"><i class="fa fa-paper-plane"></i>&nbsp; Contact Me</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
         </nav>
     </header>
-
-    <div class="navigation-menu">
-        <div class="link page-scroll-m">
-            <a href="#about-me">About Me</a><br>
-        </div>
-        <div class="link page-scroll-m">
-            <a href="#projects-content">Projects</a><br>
-        </div>
-        <div class="link page-scroll-m">
-            <a href="#contact">Contact Me</a><br>
-        </div>
-    </div>
 
     <% if notice %>
           <div class="alert alert-success">

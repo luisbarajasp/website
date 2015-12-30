@@ -110,11 +110,12 @@ p,ul,ol{
     top:0;
     left: 0;
     width: 100%;
-    height: 60px;
     z-index: 100;
-    background: $uLight-gray;
-    box-shadow: 1px 1px 5px #888888;
-    text-align: left;
+    .navbar{
+        height: 100%;
+        box-shadow: 1px 1px 5px #888888;
+    }
+
     //Border radius
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -125,15 +126,18 @@ p,ul,ol{
         height: 100%;
         width: 10%;
         img{
-            margin-top: 2.5%;
-            height: 90%;
+            height: 47px;
+            width: 47px;
+        }
+        #logo{
+            padding: 2px 15px;
         }
     }
     .social{
-        font-size: 1.5em;
-        display: inline-block;
-        vertical-align: middle;
+        padding-top: 10px;
         a{
+            display: inline-block;
+            font-size: 18px;
             color: $gray;
             padding: .5em;
             text-decoration: none;
@@ -143,98 +147,16 @@ p,ul,ol{
             }
         }
     }
-    .navbar{
-        float: right;
-        display: inline-block;
-        padding: .9em 2em;
+    .navbar-right{
         a{
-            font-size: 1.2em;
-            text-decoration: none;
-            padding: .5em;
-            //Border radius
-            -moz-border-radius: 6px;
-            -webkit-border-radius: 6px;
-            border-radius: 6px;
-        }
-        .inactive{
-            color: $gray;
-            &:hover{
-                color: $dark;
-            }
+            font-size: 14px;
+            margin-top: 2.5px;
         }
         .active{
             background: $dark;
             color: $light-gray;
             pointer-events: none;
             cursor: default;
-        }
-    }
-}
-
-.btn-navigation{
-    font-size: 4vh;
-    float: right;
-    display: inline-block;
-    text-align: center;
-    width: 10vh;
-    color: $gray;
-    height: 80%;
-    i{
-        border: 1px solid $gray;
-        //Border radius
-        -moz-border-radius: 4px;
-        -webkit-border-radius: 4px;
-        border-radius: 4px;
-        padding-top: .5vh;
-        margin-top: 10%;
-        height: 80%;
-        width: 60%;
-    }
-    display: none;
-}
-
-.navigation-menu{
-    font-size: 3.5vh;
-    position: fixed;
-    top: 8%;
-    right: 0px;
-    width: 100%;
-    z-index: 500;
-    background: $light-gray;
-    display: none;
-    height: inherit;
-    .link{
-        border-bottom: 1px solid $uLight-gray;
-        padding: 2vh;
-    }
-    a{
-        height: auto;
-        width: auto;
-        color: $gray;
-        text-decoration: none;
-        &:hover{
-            color: $dark;
-        }
-    }
-    border-bottom: 1px solid $gray;
-}
-
-@media (max-width:991px){
-    #main-navigation{
-        .brand-logo{
-            padding-left: 2em;
-        }
-        height: 8%;
-        .navbar{
-            display: none;
-        }
-        .social{
-            vertical-align: middle;
-            font-size: 3vh;
-            margin-left: 3em;
-        }
-        .btn-navigation{
-            display: block;
         }
     }
 }

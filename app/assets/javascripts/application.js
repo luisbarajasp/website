@@ -20,22 +20,22 @@
 //= require turbolinks
 //= require_tree .
 
-function toggleNav(){
-    var menu = $('.navigation-menu');
-
-    $(menu).slideToggle(400);
-
-    var icon = $('#icon');
-    flag = icon.hasClass('fa-bars');
-
-    if(flag){
-        icon.removeClass('fa-bars');
-        icon.addClass('fa-times');
-    }else{
-        icon.removeClass('fa-times');
-        icon.addClass('fa-bars');
-    }
-}
+// function toggleNav(){
+//     var menu = $('.navigation-menu');
+//
+//     $(menu).slideToggle(400);
+//
+//     var icon = $('#icon');
+//     flag = icon.hasClass('fa-bars');
+//
+//     if(flag){
+//         icon.removeClass('fa-bars');
+//         icon.addClass('fa-times');
+//     }else{
+//         icon.removeClass('fa-times');
+//         icon.addClass('fa-bars');
+//     }
+// }
 
 $(document).ready(function(){
 
@@ -46,19 +46,8 @@ $(document).ready(function(){
    $('a.page-scroll').click(function(event){
        var anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top - 60
+            scrollTop: $(anchor.attr('href')).offset().top - 55
         }, 1000);
-        event.preventDefault();
-   });
-
-   $('.page-scroll-m').click(function(event){
-       var height = $(window).height();
-       var anchor = $(this);
-       var anchorRef = anchor.children('a').attr('href')
-        $('html, body').stop().animate({
-            scrollTop: $(anchorRef).offset().top - height*0.08
-        }, 1000);
-        toggleNav();
         event.preventDefault();
    });
 
@@ -128,12 +117,12 @@ $(document).ready(function(){
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop() + 70;
-    $('.navbar a').each(function () {
+    $('.navbar-right a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos - 80) {
-            $('.navbar a').removeClass("active");
-            $('.navbar a').addClass("inactive");
+            $('.navbar-right a').removeClass("active");
+            $('.navbar-right a').addClass("inactive");
             currLink.removeClass("inactive");
             currLink.addClass("active");
         }
